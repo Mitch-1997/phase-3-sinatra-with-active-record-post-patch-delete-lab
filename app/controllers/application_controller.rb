@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/bakeries/:id' do
-    baked_goods = BakedGood.find(params[:id])
+    baked_goods = Bakery.find(params[:id])
     baked_goods.update(
       name: params[:name]
     )
